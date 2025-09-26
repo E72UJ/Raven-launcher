@@ -1,5 +1,6 @@
-[gd_scene load_steps=30 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=31 format=4 uid="uid://4odjtnirpel2"]
 
+[ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
 [ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
@@ -1184,7 +1185,7 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_2qvp8")
 layout_mode = 0
 offset_left = 35.0
 offset_top = 14.0
-offset_right = 110.0
+offset_right = 140.0
 offset_bottom = 37.0
 text = "魔法学院的秘密"
 label_settings = SubResource("LabelSettings_24d08")
@@ -1285,6 +1286,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_hbe7s")
 theme_override_styles/hover = SubResource("StyleBoxFlat_g1ltr")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebfx1")
 text = "启动项目"
+script = ExtResource("1_24d08")
 
 [node name="DesktopTest" type="Button" parent="ActionPanel"]
 layout_mode = 0
@@ -1342,4 +1344,13 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
 text = "构建发布版本"
 script = ExtResource("1_gxo8o")
 
+[node name="StatusLabel" type="Label" parent="."]
+offset_left = 7.0
+offset_top = 687.0
+offset_right = 47.0
+offset_bottom = 710.0
+text = "就绪。"
+
+[connection signal="mouse_entered" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_entered"]
+[connection signal="pressed" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_pressed"]
 [connection signal="pressed" from="ActionPanel/BuildRelease" to="ActionPanel/BuildRelease" method="_on_pressed"]
