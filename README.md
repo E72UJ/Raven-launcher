@@ -46,3 +46,19 @@ Godot 版本 4.4.1
    - Name: FooterContainer
    - Children:
      - Label: 版权所有 © 2025 Raven Studio
+
+
+## 基础命名
+# 方法命名
+func test_on_desktop():         # 桌面测试
+func edit_script():             # 编辑脚本
+func test_project():            # 项目测试
+func open_project_folder():     # 打开项目文件夹
+func build_release():           # 构建发布版本
+
+# 按钮节点命名
+@onready var desktop_test_button = $DesktopTestButton
+@onready var edit_script_button = $EditScriptButton
+@onready var project_test_button = $ProjectTestButton
+@onready var open_folder_button = $OpenFolderButton
+@onready var build_release_button = $BuildReleaseButton

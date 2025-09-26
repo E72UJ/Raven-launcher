@@ -1,4 +1,6 @@
-[gd_scene load_steps=20 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=30 format=4 uid="uid://4odjtnirpel2"]
+
+[ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://build_release.gd" id="1_gxo8o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
 content_margin_left = 0.0
@@ -1024,6 +1026,57 @@ border_width_bottom = 1
 border_color = Color(0.176471, 0.176471, 0.176471, 1)
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbe7s"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1ltr"]
+bg_color = Color(0.360784, 0.541176, 0.776471, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebfx1"]
+bg_color = Color(0.290196, 0.435294, 0.647059, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf7dw"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsue6"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxe32"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62vom"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsrtb"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qeq3"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="Root" type="Node2D"]
 
 [node name="MainControl" type="Control" parent="."]
@@ -1212,3 +1265,77 @@ offset_top = 269.0
 offset_right = 1162.0
 offset_bottom = 676.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_8hd61")
+
+[node name="ActionPanel" type="Label" parent="ActionPanel"]
+layout_mode = 0
+offset_left = 35.0
+offset_top = 14.0
+offset_right = 99.0
+offset_bottom = 37.0
+text = "项目操作"
+
+[node name="RunButton" type="Button" parent="ActionPanel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 47.0
+offset_right = 393.0
+offset_bottom = 99.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_hbe7s")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1ltr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_ebfx1")
+text = "启动项目"
+
+[node name="DesktopTest" type="Button" parent="ActionPanel"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 47.0
+offset_right = 767.0
+offset_bottom = 99.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_vf7dw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bsue6")
+theme_override_styles/normal = SubResource("StyleBoxFlat_cxe32")
+text = "桌面测试"
+
+[node name="EditScript" type="Button" parent="ActionPanel"]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 111.0
+offset_right = 398.0
+offset_bottom = 163.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+text = "编辑脚本"
+
+[node name="ProjectTest" type="Button" parent="ActionPanel"]
+offset_left = 410.0
+offset_top = 110.0
+offset_right = 771.0
+offset_bottom = 162.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+text = "项目检查"
+
+[node name="OpenProjectFolder" type="Button" parent="ActionPanel"]
+offset_left = 38.0
+offset_top = 183.0
+offset_right = 399.0
+offset_bottom = 235.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+text = "打开项目文件夹"
+
+[node name="BuildRelease" type="Button" parent="ActionPanel"]
+offset_left = 410.0
+offset_top = 181.0
+offset_right = 771.0
+offset_bottom = 233.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+text = "构建发布版本"
+script = ExtResource("1_gxo8o")
+
+[connection signal="pressed" from="ActionPanel/BuildRelease" to="ActionPanel/BuildRelease" method="_on_pressed"]
