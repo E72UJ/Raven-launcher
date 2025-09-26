@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=4 uid="uid://4odjtnirpel2"]
 
-[ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://build_release.gd" id="1_gxo8o"]
+[ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
 content_margin_left = 0.0
@@ -1218,6 +1218,7 @@ theme_override_font_sizes/font_size = 14
 text = "创建日期"
 
 [node name="ProjectTime" type="Label" parent="Right"]
+layout_mode = 0
 offset_left = 456.0
 offset_top = 72.0
 offset_right = 540.0
@@ -1308,6 +1309,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
 text = "编辑脚本"
 
 [node name="ProjectTest" type="Button" parent="ActionPanel"]
+layout_mode = 0
 offset_left = 410.0
 offset_top = 110.0
 offset_right = 771.0
@@ -1318,6 +1320,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
 text = "项目检查"
 
 [node name="OpenProjectFolder" type="Button" parent="ActionPanel"]
+layout_mode = 0
 offset_left = 38.0
 offset_top = 183.0
 offset_right = 399.0
@@ -1328,6 +1331,7 @@ theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
 text = "打开项目文件夹"
 
 [node name="BuildRelease" type="Button" parent="ActionPanel"]
+layout_mode = 0
 offset_left = 410.0
 offset_top = 181.0
 offset_right = 771.0
