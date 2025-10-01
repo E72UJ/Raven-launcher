@@ -9,3 +9,8 @@ func _on_pressed() -> void:
 func _on_mouse_entered() -> void:
 	status_label.text = self.text
 	pass # Replace with function body.
+
+
+func _on_mouse_exited() -> void:
+	status_label.text = "就绪"
+	pass # Replace with function body.

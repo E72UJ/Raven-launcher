@@ -1301,9 +1301,9 @@ text = "桌面测试"
 
 [node name="EditScript" type="Button" parent="ActionPanel"]
 layout_mode = 0
-offset_left = 37.0
+offset_left = 32.0
 offset_top = 111.0
-offset_right = 398.0
+offset_right = 393.0
 offset_bottom = 163.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
@@ -1312,10 +1312,10 @@ text = "编辑脚本"
 
 [node name="ProjectTest" type="Button" parent="ActionPanel"]
 layout_mode = 0
-offset_left = 410.0
-offset_top = 110.0
-offset_right = 771.0
-offset_bottom = 162.0
+offset_left = 406.0
+offset_top = 111.0
+offset_right = 767.0
+offset_bottom = 163.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
 theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
@@ -1352,5 +1352,6 @@ offset_bottom = 710.0
 text = "就绪。"
 
 [connection signal="mouse_entered" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_pressed"]
 [connection signal="pressed" from="ActionPanel/BuildRelease" to="ActionPanel/BuildRelease" method="_on_pressed"]
