@@ -1006,7 +1006,7 @@ content_margin_bottom = 0.0
 bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
 border_width_left = 1
 border_width_bottom = 1
-border_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+border_color = Color(0.176471, 0.176471, 0.176471, 1)
 corner_detail = 1
 
 [sub_resource type="LabelSettings" id="LabelSettings_24d08"]
