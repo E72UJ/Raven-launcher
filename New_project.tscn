@@ -1,0 +1,224 @@
+[gd_scene load_steps=12 format=3 uid="uid://cmwrmd8mjwtgf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym448"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7rfqp"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 0.505882)
+shadow_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_ym448"]
+font_size = 26
+font_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_apm7b"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_7rfqp"]
+font_size = 20
+font_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qoqf"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.101961, 0.101961, 0.101961, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v7u23"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2, 0.2, 0.2, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 10
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bco4o"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_apm7b"]
+font_size = 20
+font_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gvxdm"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ogtag"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+draw_center = false
+border_color = Color(0.266667, 0.266667, 0.266667, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[node name="new-project" type="Node2D"]
+
+[node name="background" type="Panel" parent="."]
+offset_right = 1278.0
+offset_bottom = 867.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ym448")
+
+[node name="container" type="Panel" parent="."]
+offset_left = 193.0
+offset_top = 11.0
+offset_right = 993.0
+offset_bottom = 711.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_7rfqp")
+
+[node name="Label" type="Label" parent="container"]
+layout_mode = 0
+offset_left = 285.0
+offset_top = 18.0
+offset_right = 473.0
+offset_bottom = 55.0
+text = "Raven 新建项目"
+label_settings = SubResource("LabelSettings_ym448")
+
+[node name="form-row" type="Panel" parent="."]
+offset_left = 269.0
+offset_top = 93.0
+offset_right = 943.0
+offset_bottom = 182.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_apm7b")
+
+[node name="form-label" type="Label" parent="form-row"]
+layout_mode = 0
+offset_left = -20.0
+offset_top = 1.0
+offset_right = 142.0
+offset_bottom = 41.0
+text = "项目名称*"
+label_settings = SubResource("LabelSettings_7rfqp")
+
+[node name="projectName" type="TextEdit" parent="form-row"]
+layout_mode = 0
+offset_left = -22.0
+offset_top = 46.0
+offset_right = 642.0
+offset_bottom = 84.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_4qoqf")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v7u23")
+placeholder_text = "输入项目名称"
+scroll_fit_content_height = true
+
+[node name="form-row2" type="Panel" parent="."]
+offset_left = 261.0
+offset_top = 199.0
+offset_right = 935.0
+offset_bottom = 288.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_bco4o")
+
+[node name="form-label" type="Label" parent="form-row2"]
+layout_mode = 0
+offset_left = -7.0
+offset_right = 90.0
+offset_bottom = 29.0
+text = "项目位置 *"
+label_settings = SubResource("LabelSettings_apm7b")
+
+[node name="project_path_input" type="TextEdit" parent="form-row2"]
+layout_mode = 0
+offset_left = -10.0
+offset_top = 40.0
+offset_right = 254.0
+offset_bottom = 78.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxFlat_gvxdm")
+theme_override_styles/focus = SubResource("StyleBoxFlat_ogtag")
+placeholder_text = "输入项目位置"
+
+[node name="form-label2" type="Label" parent="form-row2"]
+layout_mode = 0
+offset_left = 420.0
+offset_top = 4.0
+offset_right = 497.0
+offset_bottom = 28.0
+text = "项目位置 *"

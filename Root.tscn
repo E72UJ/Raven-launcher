@@ -1,6 +1,7 @@
-[gd_scene load_steps=31 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=32 format=4 uid="uid://4odjtnirpel2"]
 
 [ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
+[ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
 [ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
@@ -1173,6 +1174,7 @@ theme_override_styles/focus = SubResource("StyleBoxFlat_f5i44")
 theme_override_styles/hover = SubResource("StyleBoxFlat_3ipfy")
 theme_override_styles/normal = SubResource("StyleBoxFlat_g0d6c")
 text = "新建项目"
+script = ExtResource("1_170dk")
 
 [node name="Right" type="Panel" parent="."]
 offset_left = 342.0
@@ -1351,6 +1353,7 @@ offset_right = 47.0
 offset_bottom = 710.0
 text = "就绪。"
 
+[connection signal="pressed" from="CreateProjectPanel/CreateProjectButton" to="CreateProjectPanel/CreateProjectButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_exited"]
 [connection signal="pressed" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_pressed"]
