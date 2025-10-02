@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://cmwrmd8mjwtgf"]
+[gd_scene load_steps=21 format=3 uid="uid://cmwrmd8mjwtgf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym448"]
 content_margin_left = 0.0
@@ -136,6 +136,126 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
+[sub_resource type="LabelSettings" id="LabelSettings_4qoqf"]
+font_size = 20
+font_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiehy"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.133333, 0.133333, 0.133333, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 0.945098)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3s1jh"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w4i57"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0, 0, 0, 0.6)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.0162145, 0.0123748, 0.00485229, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txoq7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+border_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3hl3"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_v7u23"]
+font_size = 20
+font_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jyxg"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.133333, 0.133333, 0.133333, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+shadow_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgaft"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [node name="new-project" type="Node2D"]
 
 [node name="background" type="Panel" parent="."]
@@ -207,8 +327,8 @@ label_settings = SubResource("LabelSettings_apm7b")
 layout_mode = 0
 offset_left = -10.0
 offset_top = 40.0
-offset_right = 254.0
-offset_bottom = 78.0
+offset_right = 279.0
+offset_bottom = 79.0
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 15
 theme_override_styles/normal = SubResource("StyleBoxFlat_gvxdm")
@@ -217,8 +337,54 @@ placeholder_text = "输入项目位置"
 
 [node name="form-label2" type="Label" parent="form-row2"]
 layout_mode = 0
-offset_left = 420.0
-offset_top = 4.0
-offset_right = 497.0
-offset_bottom = 28.0
-text = "项目位置 *"
+offset_left = 314.0
+offset_right = 400.0
+offset_bottom = 29.0
+text = "引擎版本"
+label_settings = SubResource("LabelSettings_4qoqf")
+
+[node name="project_version_text" type="OptionButton" parent="form-row2"]
+layout_mode = 0
+offset_left = 313.0
+offset_top = 39.0
+offset_right = 644.0
+offset_bottom = 78.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_eiehy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3s1jh")
+item_count = 1
+popup/item_0/text = "0.13"
+popup/item_0/id = 0
+
+[node name="Button" type="Button" parent="form-row2"]
+layout_mode = 0
+offset_left = -6.0
+offset_top = 91.0
+offset_right = 110.0
+offset_bottom = 133.0
+theme_override_styles/pressed = SubResource("StyleBoxFlat_w4i57")
+theme_override_styles/normal = SubResource("StyleBoxFlat_txoq7")
+text = "选择位置"
+
+[node name="form-row3" type="Panel" parent="."]
+offset_left = 250.0
+offset_top = 351.0
+offset_right = 949.0
+offset_bottom = 472.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s3hl3")
+
+[node name="form-label" type="Label" parent="form-row3"]
+layout_mode = 0
+offset_left = 5.0
+offset_right = 102.0
+offset_bottom = 29.0
+text = "项目模版 *"
+label_settings = SubResource("LabelSettings_v7u23")
+
+[node name="OptionButton" type="OptionButton" parent="form-row3"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 37.0
+offset_right = 672.0
+offset_bottom = 77.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_8jyxg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgaft")
