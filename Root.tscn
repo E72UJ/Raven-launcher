@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
 [ext_resource type="FontFile" uid="uid://bu64tinsxbvgg" path="res://font/fontello.ttf" id="1_cwqeq"]
 [ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
+[ext_resource type="Script" uid="uid://cum01ql2llexo" path="res://script/about.gd" id="2_3ipfy"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
 content_margin_left = 0.0
@@ -930,12 +931,27 @@ cache/0/50/0/glyphs/3/size = Vector2(0, 0)
 cache/0/50/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
 cache/0/50/0/glyphs/3/texture_idx = -1
 
-[sub_resource type="FontVariation" id="FontVariation_3ipfy"]
-base_font = ExtResource("1_cwqeq")
-
-[sub_resource type="LabelSettings" id="LabelSettings_g0d6c"]
-font = SubResource("FontVariation_3ipfy")
-font_size = 25
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_folha"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24d08"]
 content_margin_left = 0.0
@@ -1116,14 +1132,17 @@ theme_override_fonts/font = SubResource("FontFile_170dk")
 theme_override_font_sizes/font_size = 30
 text = "Raven Launcher"
 
-[node name="Label" type="Label" parent="Header"]
+[node name="About" type="Button" parent="Header"]
 layout_mode = 0
-offset_left = 1034.0
+offset_left = 1037.0
 offset_top = 30.0
-offset_right = 1050.0
-offset_bottom = 50.0
+offset_right = 1087.0
+offset_bottom = 64.0
+theme_override_fonts/font = ExtResource("1_cwqeq")
+theme_override_font_sizes/font_size = 25
+theme_override_styles/focus = SubResource("StyleBoxFlat_folha")
 text = ""
-label_settings = SubResource("LabelSettings_g0d6c")
+script = ExtResource("2_3ipfy")
 
 [node name="Left" type="Panel" parent="."]
 offset_left = 3.0
@@ -1370,6 +1389,7 @@ offset_right = 47.0
 offset_bottom = 710.0
 text = "就绪。"
 
+[connection signal="pressed" from="Header/About" to="Header/About" method="_on_pressed"]
 [connection signal="pressed" from="CreateProjectPanel/CreateProjectButton" to="CreateProjectPanel/CreateProjectButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_exited"]
