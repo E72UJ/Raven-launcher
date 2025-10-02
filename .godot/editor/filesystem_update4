@@ -2,3 +2,4 @@ res://Root.tscn
 res://new_project.tscn
 res://New_project.tscn
 res://script/create_project_button.gd
+res://script/cancel_button.gd

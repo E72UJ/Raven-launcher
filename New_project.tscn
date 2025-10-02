@@ -1,4 +1,6 @@
-[gd_scene load_steps=21 format=3 uid="uid://cmwrmd8mjwtgf"]
+[gd_scene load_steps=30 format=3 uid="uid://cmwrmd8mjwtgf"]
+
+[ext_resource type="Script" uid="uid://cpp486b8wos4j" path="res://script/cancel_button.gd" id="1_7rfqp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym448"]
 content_margin_left = 0.0
@@ -256,6 +258,113 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wbq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_bco4o"]
+font_size = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h8ll"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.00566115, 0.00566115, 0.00566114, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_246l3"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2hkc5"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pmvh"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4cnhp"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.34902, 0.545098, 0.803922, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n1bx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.290196, 0.478431, 0.737255, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [node name="new-project" type="Node2D"]
 
 [node name="background" type="Panel" parent="."]
@@ -351,6 +460,7 @@ offset_right = 644.0
 offset_bottom = 78.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_eiehy")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3s1jh")
+selected = 0
 item_count = 1
 popup/item_0/text = "0.13"
 popup/item_0/id = 0
@@ -380,7 +490,7 @@ offset_bottom = 29.0
 text = "项目模版 *"
 label_settings = SubResource("LabelSettings_v7u23")
 
-[node name="OptionButton" type="OptionButton" parent="form-row3"]
+[node name="ProjectModeSelector" type="OptionButton" parent="form-row3"]
 layout_mode = 0
 offset_left = 7.0
 offset_top = 37.0
@@ -388,3 +498,57 @@ offset_right = 672.0
 offset_bottom = 77.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_8jyxg")
 theme_override_styles/normal = SubResource("StyleBoxFlat_qgaft")
+selected = 0
+item_count = 1
+popup/item_0/text = "默认模版"
+popup/item_0/id = 0
+
+[node name="form-row4" type="Panel" parent="."]
+offset_left = 257.0
+offset_top = 458.0
+offset_right = 933.0
+offset_bottom = 574.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_q0wbq")
+
+[node name="form-label" type="Label" parent="form-row4"]
+layout_mode = 0
+offset_right = 98.0
+offset_bottom = 30.0
+text = "项目模式 *"
+label_settings = SubResource("LabelSettings_bco4o")
+
+[node name="OptionButton" type="OptionButton" parent="form-row4"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 36.0
+offset_right = 664.0
+offset_bottom = 79.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_8h8ll")
+theme_override_styles/normal = SubResource("StyleBoxFlat_246l3")
+selected = 0
+item_count = 2
+popup/item_0/text = "剧情模式"
+popup/item_0/id = 0
+popup/item_1/text = "开发模式"
+popup/item_1/id = 1
+
+[node name="cancel_button" type="Button" parent="."]
+offset_left = 711.0
+offset_top = 634.0
+offset_right = 818.0
+offset_bottom = 677.0
+theme_override_styles/focus = SubResource("StyleBoxFlat_2hkc5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pmvh")
+text = "取消"
+script = ExtResource("1_7rfqp")
+
+[node name="create_button" type="Button" parent="."]
+offset_left = 827.0
+offset_top = 633.0
+offset_right = 963.0
+offset_bottom = 678.0
+theme_override_styles/hover = SubResource("StyleBoxFlat_4cnhp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6n1bx")
+text = "创建项目"
+
+[connection signal="pressed" from="cancel_button" to="cancel_button" method="_on_pressed"]

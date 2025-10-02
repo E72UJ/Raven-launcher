@@ -1,7 +1,8 @@
-[gd_scene load_steps=32 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=35 format=4 uid="uid://4odjtnirpel2"]
 
 [ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
 [ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
+[ext_resource type="FontFile" uid="uid://bu64tinsxbvgg" path="res://font/fontello.ttf" id="1_cwqeq"]
 [ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
@@ -929,6 +930,13 @@ cache/0/50/0/glyphs/3/size = Vector2(0, 0)
 cache/0/50/0/glyphs/3/uv_rect = Rect2(0, 0, 0, 0)
 cache/0/50/0/glyphs/3/texture_idx = -1
 
+[sub_resource type="FontVariation" id="FontVariation_3ipfy"]
+base_font = ExtResource("1_cwqeq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_g0d6c"]
+font = SubResource("FontVariation_3ipfy")
+font_size = 25
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24d08"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -1107,6 +1115,15 @@ offset_bottom = 64.0
 theme_override_fonts/font = SubResource("FontFile_170dk")
 theme_override_font_sizes/font_size = 30
 text = "Raven Launcher"
+
+[node name="Label" type="Label" parent="Header"]
+layout_mode = 0
+offset_left = 1034.0
+offset_top = 30.0
+offset_right = 1050.0
+offset_bottom = 50.0
+text = ""
+label_settings = SubResource("LabelSettings_g0d6c")
 
 [node name="Left" type="Panel" parent="."]
 offset_left = 3.0
