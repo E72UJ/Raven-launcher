@@ -1,2 +1,7 @@
 res://script/project_item.gd
 res://Root.tscn
+res://asstes/projects.json
+res://script/root.gd
+res://script/ProjectData.gd
+res://script/ProjectManager.gd
+res://script/about.gd

@@ -1,0 +1,22 @@
+{
+  "projects": [
+	{
+	  "id": "01",
+	  "name": "伪自由之书",
+	  "path": "string",
+	  "created_date": "ISO 8601 datetime",
+	  "modified_date": "ISO 8601 datetime",
+	  "engine_version": "string",
+	  "project_type": "string",
+	  "description": "string (optional)",
+	  "last_opened": "ISO 8601 datetime (optional)",
+	  "tags": ["array of strings (optional)"],
+	  "status": "string (optional)"
+	}
+  ],
+  "metadata": {
+	"version": "string",
+	"last_updated": "ISO 8601 datetime",
+	"total_projects": "number"
+  }
+}

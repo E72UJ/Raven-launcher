@@ -1,8 +1,9 @@
-[gd_scene load_steps=36 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=37 format=4 uid="uid://4odjtnirpel2"]
 
 [ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
 [ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
 [ext_resource type="FontFile" uid="uid://bu64tinsxbvgg" path="res://font/fontello.ttf" id="1_cwqeq"]
+[ext_resource type="Script" uid="uid://dreilbt1jneec" path="res://script/root.gd" id="1_f5i44"]
 [ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
 [ext_resource type="Script" uid="uid://cum01ql2llexo" path="res://script/about.gd" id="2_3ipfy"]
 [ext_resource type="Script" uid="uid://24ahbofxraip" path="res://script/project_item.gd" id="3_g0d6c"]
@@ -1105,6 +1106,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [node name="Root" type="Node2D"]
+script = ExtResource("1_f5i44")
 
 [node name="MainControl" type="Control" parent="."]
 layout_mode = 3
@@ -1391,6 +1393,7 @@ offset_right = 47.0
 offset_bottom = 710.0
 text = "就绪。"
 
+[connection signal="ready" from="." to="." method="_on_ready"]
 [connection signal="pressed" from="Header/About" to="Header/About" method="_on_pressed"]
 [connection signal="pressed" from="Left/ProjectItem" to="Left/ProjectItem" method="_on_pressed"]
 [connection signal="pressed" from="CreateProjectPanel/CreateProjectButton" to="CreateProjectPanel/CreateProjectButton" method="_on_pressed"]
