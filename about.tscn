@@ -69,6 +69,7 @@ offset_bottom = 867.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_psspk")
 
 [node name="container" type="Panel" parent="background"]
+layout_mode = 0
 offset_left = 193.0
 offset_top = 11.0
 offset_right = 993.0
@@ -117,12 +118,21 @@ text = "Raven 是一款基于 Rust 开发的现代化视觉小说/
 文字游戏引擎，高效专注于为开发者提供简洁的叙述工具链。"
 
 [node name="btn2" type="Button" parent="background/container"]
+layout_mode = 0
 offset_left = 591.0
 offset_top = 444.0
 offset_right = 768.0
 offset_bottom = 484.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_pp48r")
 text = "许可证"
+
+[node name="github" type="Label" parent="background/container"]
+layout_mode = 0
+offset_left = 361.0
+offset_top = 322.0
+offset_right = 705.0
+offset_bottom = 353.0
+text = "开源地址：https://github.com/e72uj/raven"
 
 [node name="about_close" type="Button" parent="."]
 offset_left = 513.0

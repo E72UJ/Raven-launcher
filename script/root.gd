@@ -1,17 +1,20 @@
 extends Node2D
 
 var project_manager: ProjectManager
+@onready var left = $Left  # 你的 left 节点
 func _on_ready() -> void:
+
 	project_manager = ProjectManager.new()
-	add_sample_projects(project_manager)
+	
 	if project_manager.load_projects():
 		print("项目配置加载成功")
+		print_tree()
+		add_sample_projects(project_manager)
 		display_projects()
 	else:
 		print("项目配置加载失败，创建新配置")
 		create_sample_projects()
 	pass # Replace with function body.
-	
 
 
 
@@ -96,5 +99,3 @@ func add_sample_projects(manager: ProjectManager):
 	manager.add_project(project3)
 	
 	print("已添加 3 个项目")
-
-	
