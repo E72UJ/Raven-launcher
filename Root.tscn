@@ -1,10 +1,11 @@
-[gd_scene load_steps=35 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=36 format=4 uid="uid://4odjtnirpel2"]
 
 [ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
 [ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
 [ext_resource type="FontFile" uid="uid://bu64tinsxbvgg" path="res://font/fontello.ttf" id="1_cwqeq"]
 [ext_resource type="Script" uid="uid://bhyb6pb2nx7no" path="res://script/build_release.gd" id="1_gxo8o"]
 [ext_resource type="Script" uid="uid://cum01ql2llexo" path="res://script/about.gd" id="2_3ipfy"]
+[ext_resource type="Script" uid="uid://24ahbofxraip" path="res://script/project_item.gd" id="3_g0d6c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
 content_margin_left = 0.0
@@ -1174,6 +1175,7 @@ offset_top = 59.0
 offset_right = 310.0
 offset_bottom = 127.0
 theme_override_styles/focus = SubResource("StyleBoxFlat_n0g3p")
+script = ExtResource("3_g0d6c")
 
 [node name="Projectname" type="Label" parent="Left/ProjectItem"]
 layout_mode = 0
@@ -1390,6 +1392,7 @@ offset_bottom = 710.0
 text = "就绪。"
 
 [connection signal="pressed" from="Header/About" to="Header/About" method="_on_pressed"]
+[connection signal="pressed" from="Left/ProjectItem" to="Left/ProjectItem" method="_on_pressed"]
 [connection signal="pressed" from="CreateProjectPanel/CreateProjectButton" to="CreateProjectPanel/CreateProjectButton" method="_on_pressed"]
 [connection signal="mouse_entered" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="ActionPanel/RunButton" to="ActionPanel/RunButton" method="_on_mouse_exited"]

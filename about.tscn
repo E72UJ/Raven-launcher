@@ -1,0 +1,136 @@
+[gd_scene load_steps=9 format=3 uid="uid://ct8im6chm48n3"]
+
+[ext_resource type="Texture2D" uid="uid://dpbe4jay7hkxv" path="res://asstes/logo.png" id="1_4q2eq"]
+[ext_resource type="Script" uid="uid://y7bqo7eqqqfp" path="res://script/about_close.gd" id="2_pp48r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_psspk"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.101961, 0.101961, 0.101961, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4q2eq"]
+content_margin_left = 0.0
+content_margin_top = 0.0
+content_margin_right = 0.0
+content_margin_bottom = 0.0
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 5
+shadow_color = Color(0, 0, 0, 0.505882)
+shadow_size = 10
+
+[sub_resource type="LabelSettings" id="LabelSettings_pp48r"]
+font_size = 40
+font_color = Color(0.878431, 0.878431, 0.878431, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pp48r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.2, 0.2, 0.2, 1)
+border_color = Color(0.266667, 0.266667, 0.266667, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="LabelSettings" id="LabelSettings_4q2eq"]
+font_size = 28
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k56y8"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[node name="About" type="Node2D"]
+
+[node name="background" type="Panel" parent="."]
+offset_right = 1278.0
+offset_bottom = 867.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_psspk")
+
+[node name="container" type="Panel" parent="background"]
+offset_left = 193.0
+offset_top = 11.0
+offset_right = 993.0
+offset_bottom = 711.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4q2eq")
+
+[node name="logo_text" type="Label" parent="background/container"]
+layout_mode = 0
+offset_left = 339.0
+offset_top = 16.0
+offset_right = 519.0
+offset_bottom = 73.0
+text = "关于"
+label_settings = SubResource("LabelSettings_pp48r")
+
+[node name="btn1" type="Button" parent="background/container"]
+layout_mode = 0
+offset_left = 404.0
+offset_top = 443.0
+offset_right = 581.0
+offset_bottom = 483.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pp48r")
+text = "开发者:Furau"
+
+[node name="logo" type="Sprite2D" parent="background/container"]
+position = Vector2(206, 330)
+scale = Vector2(0.233562, 0.233562)
+texture = ExtResource("1_4q2eq")
+
+[node name="text1" type="Label" parent="background/container"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 177.0
+offset_right = 657.0
+offset_bottom = 238.0
+text = "Raven engine"
+label_settings = SubResource("LabelSettings_4q2eq")
+
+[node name="Label" type="Label" parent="background/container"]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 258.0
+offset_right = 791.0
+offset_bottom = 427.0
+text = "Raven 是一款基于 Rust 开发的现代化视觉小说/
+文字游戏引擎，高效专注于为开发者提供简洁的叙述工具链。"
+
+[node name="btn2" type="Button" parent="background/container"]
+offset_left = 591.0
+offset_top = 444.0
+offset_right = 768.0
+offset_bottom = 484.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_pp48r")
+text = "许可证"
+
+[node name="about_close" type="Button" parent="."]
+offset_left = 513.0
+offset_top = 609.0
+offset_right = 691.0
+offset_bottom = 657.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_k56y8")
+text = "关闭"
+script = ExtResource("2_pp48r")
+
+[connection signal="pressed" from="about_close" to="about_close" method="_on_pressed"]
