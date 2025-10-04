@@ -3,3 +3,4 @@ res://script/ProjectManager.gd
 res://script/root.gd
 res://asstes/projects.json
 res://script/project_item.gd
+res://script/project_item_2.gd
