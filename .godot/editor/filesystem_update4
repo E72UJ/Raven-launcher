@@ -1,1 +1,5 @@
 res://Root.tscn
+res://script/ProjectManager.gd
+res://script/root.gd
+res://asstes/projects.json
+res://script/project_item.gd
