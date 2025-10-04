@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=39 format=4 uid="uid://4odjtnirpel2"]
 
 [ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
 [ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
@@ -991,6 +991,35 @@ corner_radius_bottom_left = 5
 [sub_resource type="LabelSettings" id="LabelSettings_ic2kv"]
 font_size = 12
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xnlii"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.227451, 0.227451, 0.227451, 0)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fekcc"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 4
+border_color = Color(0.290196, 0.435294, 0.647059, 1)
+corner_radius_top_left = 5
+corner_radius_bottom_left = 5
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cwqeq"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -1008,8 +1037,12 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5i44"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0d6c"]
+bg_color = Color(0.290196, 0.435294, 0.647059, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3ipfy"]
 bg_color = Color(0.360784, 0.541176, 0.776471, 1)
@@ -1018,12 +1051,8 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g0d6c"]
-bg_color = Color(0.290196, 0.435294, 0.647059, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f5i44"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2qvp8"]
 content_margin_left = 0.0
@@ -1054,8 +1083,12 @@ border_width_bottom = 1
 border_color = Color(0.176471, 0.176471, 0.176471, 1)
 corner_detail = 5
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbe7s"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebfx1"]
+bg_color = Color(0.290196, 0.435294, 0.647059, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1ltr"]
 bg_color = Color(0.360784, 0.541176, 0.776471, 1)
@@ -1064,22 +1097,8 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ebfx1"]
-bg_color = Color(0.290196, 0.435294, 0.647059, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf7dw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hbe7s"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsue6"]
-bg_color = Color(0.227451, 0.227451, 0.227451, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cxe32"]
 bg_color = Color(0.176471, 0.176471, 0.176471, 1)
@@ -1088,8 +1107,22 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62vom"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bsue6"]
+bg_color = Color(0.227451, 0.227451, 0.227451, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vf7dw"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qeq3"]
+bg_color = Color(0.176471, 0.176471, 0.176471, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wsrtb"]
 bg_color = Color(0.227451, 0.227451, 0.227451, 1)
@@ -1098,12 +1131,8 @@ corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4qeq3"]
-bg_color = Color(0.176471, 0.176471, 0.176471, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_62vom"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [node name="Root" type="Node2D"]
 script = ExtResource("1_f5i44")
@@ -1197,6 +1226,59 @@ offset_bottom = 59.0
 text = "上次编辑: 12:12"
 label_settings = SubResource("LabelSettings_ic2kv")
 
+[node name="ProjectItem2" type="Button" parent="Left"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 137.0
+offset_right = 312.0
+offset_bottom = 205.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnlii")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fekcc")
+
+[node name="Projectname" type="Label" parent="Left/ProjectItem2"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 52.0
+offset_bottom = 33.0
+text = "项目2"
+
+[node name="Projecttime" type="Label" parent="Left/ProjectItem2"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 35.0
+offset_right = 48.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 12
+text = "上次编辑：12:12"
+
+[node name="ProjectItem3" type="Button" parent="Left"]
+visible = false
+layout_mode = 0
+offset_left = 10.0
+offset_top = 217.0
+offset_right = 315.0
+offset_bottom = 285.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_xnlii")
+theme_override_styles/focus = SubResource("StyleBoxFlat_fekcc")
+
+[node name="Projectname" type="Label" parent="Left/ProjectItem3"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 9.0
+offset_right = 52.0
+offset_bottom = 33.0
+text = "项目3"
+
+[node name="Projecttime" type="Label" parent="Left/ProjectItem3"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 35.0
+offset_right = 48.0
+offset_bottom = 58.0
+theme_override_font_sizes/font_size = 12
+text = "上次编辑：12:12"
+
 [node name="CreateProjectPanel" type="Panel" parent="."]
 offset_left = -3.0
 offset_top = 614.0
@@ -1210,9 +1292,9 @@ offset_left = 26.0
 offset_top = 14.0
 offset_right = 276.0
 offset_bottom = 54.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_f5i44")
-theme_override_styles/hover = SubResource("StyleBoxFlat_3ipfy")
 theme_override_styles/normal = SubResource("StyleBoxFlat_g0d6c")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3ipfy")
+theme_override_styles/focus = SubResource("StyleBoxFlat_f5i44")
 text = "新建项目"
 script = ExtResource("1_170dk")
 
@@ -1324,9 +1406,9 @@ offset_left = 32.0
 offset_top = 47.0
 offset_right = 393.0
 offset_bottom = 99.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_hbe7s")
-theme_override_styles/hover = SubResource("StyleBoxFlat_g1ltr")
 theme_override_styles/normal = SubResource("StyleBoxFlat_ebfx1")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g1ltr")
+theme_override_styles/focus = SubResource("StyleBoxFlat_hbe7s")
 text = "启动项目"
 script = ExtResource("1_24d08")
 
@@ -1336,9 +1418,9 @@ offset_left = 406.0
 offset_top = 47.0
 offset_right = 767.0
 offset_bottom = 99.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_vf7dw")
-theme_override_styles/hover = SubResource("StyleBoxFlat_bsue6")
 theme_override_styles/normal = SubResource("StyleBoxFlat_cxe32")
+theme_override_styles/hover = SubResource("StyleBoxFlat_bsue6")
+theme_override_styles/focus = SubResource("StyleBoxFlat_vf7dw")
 text = "桌面测试"
 
 [node name="EditScript" type="Button" parent="ActionPanel"]
@@ -1347,9 +1429,9 @@ offset_left = 32.0
 offset_top = 111.0
 offset_right = 393.0
 offset_bottom = 163.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
 text = "编辑脚本"
 
 [node name="ProjectTest" type="Button" parent="ActionPanel"]
@@ -1358,9 +1440,9 @@ offset_left = 406.0
 offset_top = 111.0
 offset_right = 767.0
 offset_bottom = 163.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
 text = "项目检查"
 
 [node name="OpenProjectFolder" type="Button" parent="ActionPanel"]
@@ -1369,9 +1451,9 @@ offset_left = 38.0
 offset_top = 183.0
 offset_right = 399.0
 offset_bottom = 235.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
 text = "打开项目文件夹"
 
 [node name="BuildRelease" type="Button" parent="ActionPanel"]
@@ -1380,9 +1462,9 @@ offset_left = 410.0
 offset_top = 181.0
 offset_right = 771.0
 offset_bottom = 233.0
-theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
-theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
 theme_override_styles/normal = SubResource("StyleBoxFlat_4qeq3")
+theme_override_styles/hover = SubResource("StyleBoxFlat_wsrtb")
+theme_override_styles/focus = SubResource("StyleBoxFlat_62vom")
 text = "构建发布版本"
 script = ExtResource("1_gxo8o")
 

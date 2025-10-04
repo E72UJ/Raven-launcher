@@ -2,14 +2,22 @@ extends Node2D
 
 var project_manager: ProjectManager
 @onready var left = $Left  # 你的 left 节点
+@onready var left2 = $Left/ProjectItem2  # 你的 left 节点
+@onready var left3 = $Left/ProjectItem3 # 你的 left 节点
 func _on_ready() -> void:
-
 	project_manager = ProjectManager.new()
-	
+	left2.get_node("Projectname").text = "项目2222"
+	var project = project_manager.get_all_statuses()
+	if project:
+		print("找到项目: ", project.name)
+		print("项目路径: ", project.path)
+		# 获取完整JSON
+		var json_data = project.to_dict()
+		print("完整JSON: ", JSON.stringify(json_data, "\t"))
+	else:
+		print("未找到指定ID的项目")
 	if project_manager.load_projects():
 		print("项目配置加载成功")
-		print_tree()
-		add_sample_projects(project_manager)
 		display_projects()
 	else:
 		print("项目配置加载失败，创建新配置")
