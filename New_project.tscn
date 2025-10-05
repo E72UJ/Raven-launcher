@@ -1,6 +1,9 @@
-[gd_scene load_steps=30 format=3 uid="uid://cmwrmd8mjwtgf"]
+[gd_scene load_steps=33 format=3 uid="uid://cmwrmd8mjwtgf"]
 
+[ext_resource type="Script" uid="uid://cinclmkd1ad4l" path="res://script/new_project.gd" id="1_4qoqf"]
 [ext_resource type="Script" uid="uid://cpp486b8wos4j" path="res://script/cancel_button.gd" id="1_7rfqp"]
+[ext_resource type="Script" uid="uid://cwpxtycwxgfc2" path="res://script/create_button.gd" id="2_apm7b"]
+[ext_resource type="Script" uid="uid://ctxce3v77tg5r" path="res://script/select.gd" id="2_v7u23"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ym448"]
 content_margin_left = 0.0
@@ -366,6 +369,7 @@ corner_radius_bottom_left = 3
 corner_detail = 5
 
 [node name="new-project" type="Node2D"]
+script = ExtResource("1_4qoqf")
 
 [node name="background" type="Panel" parent="."]
 offset_right = 1278.0
@@ -465,7 +469,7 @@ item_count = 1
 popup/item_0/text = "0.13"
 popup/item_0/id = 0
 
-[node name="Button" type="Button" parent="form-row2"]
+[node name="select" type="Button" parent="form-row2"]
 layout_mode = 0
 offset_left = -6.0
 offset_top = 91.0
@@ -474,6 +478,7 @@ offset_bottom = 133.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_txoq7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_w4i57")
 text = "选择位置"
+script = ExtResource("2_v7u23")
 
 [node name="form-row3" type="Panel" parent="."]
 offset_left = 250.0
@@ -517,7 +522,7 @@ offset_bottom = 30.0
 text = "项目模式 *"
 label_settings = SubResource("LabelSettings_bco4o")
 
-[node name="OptionButton" type="OptionButton" parent="form-row4"]
+[node name="Projecttype" type="OptionButton" parent="form-row4"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 36.0
@@ -550,5 +555,10 @@ offset_bottom = 678.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_6n1bx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4cnhp")
 text = "创建项目"
+script = ExtResource("2_apm7b")
 
+[connection signal="text_changed" from="form-row/projectName" to="." method="_on_project_name_text_changed"]
+[connection signal="text_changed" from="form-row2/project_path_input" to="." method="_on_project_path_input_text_changed"]
+[connection signal="pressed" from="form-row2/select" to="form-row2/select" method="_on_pressed"]
 [connection signal="pressed" from="cancel_button" to="cancel_button" method="_on_pressed"]
+[connection signal="pressed" from="create_button" to="create_button" method="_on_pressed"]

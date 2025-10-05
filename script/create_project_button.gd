@@ -7,7 +7,7 @@ extends Button
 var dialog_shown = false
 
 func _on_pressed() -> void:
-	print("执行一个数据")
+
 	
 	# 检查所有按钮是否都显示
 	if check_all_buttons_visible():
@@ -29,8 +29,8 @@ func create_new_project():
 	get_tree().change_scene_to_file("res://New_project.tscn")
 
 func show_dialog():
-	if dialog_shown:
-		return  # 防止重复弹出
+	#if dialog_shown:
+		#return  # 防止重复弹出
 		
 	dialog_shown = true
 	var dialog = AcceptDialog.new()
