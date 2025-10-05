@@ -4,9 +4,15 @@ extends Node2D
 @onready var left = $Left/ProjectItem  # 你的 left 节点
 @onready var left2 = $Left/ProjectItem2  # 你的 left 节点
 @onready var left3 = $Left/ProjectItem3 # 你的 left 节点
+@onready var ProjectTitle = $Right/ProjectTitle  # 你的 left 节点
+@onready var ProjectPath = $Right/ProjectPath
+@onready var ProjectTime = $Right/ProjectTime
+@onready var ProjectVer = $Right/ProjectVer
+@onready var LastModified = $Right/LastModified
 @onready var pm: ProjectManager = ProjectManager.new()
 func _on_ready() -> void:
-	left2.get_node("Projectname").text = "项目2222"
+	left.grab_focus()
+	default_info()
 	#pm.edit_project_by_id("vn_001", {
 		#"name": "更名测试",
 		#"path": "/new/path/to/project"
@@ -39,3 +45,16 @@ func _on_ready() -> void:
 		left3.hide()
 
 	pm.print_all()
+	
+func default_info():
+	var selfid = "vn_001"
+	var name = pm.get_field_by_id(selfid, "name")
+	var path = pm.get_field_by_id(selfid, "path")
+	var created_date = pm.get_field_by_id(selfid, "created_date")
+	var engine_version = pm.get_field_by_id(selfid, "engine_version")
+	var last_opened = pm.get_field_by_id(selfid, "last_opened")
+	ProjectTitle.text = name
+	ProjectPath.text = path
+	ProjectTime.text = created_date
+	ProjectVer.text = engine_version
+	LastModified.text = last_opened
