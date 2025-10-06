@@ -147,9 +147,10 @@ func perform_project_creation(name: String, path: String, version: String, mode:
 	if dir.make_dir(name) != OK:
 		if not DirAccess.dir_exists_absolute(full_project_path):
 			return false
-	
+	create_structure_from_external_zip(path + "/assets", get_app_bundle_path() + "/basic.zip")
+	create_structure_from_external_zip(path, get_app_bundle_path() + "/raven.zip")  # 可能覆盖上面的文件
 	# 这里可以添加更多项目创建逻辑
-	# 比如创建配置文件、初始化文件等
+
 	
 	# 找到可用的槽位并创建项目
 	var available_slot = find_available_slot()
@@ -181,3 +182,158 @@ func clear_form():
 	project_version_text.text = ""
 	ProjectModeSelector.selected = -1
 	Projectype.selected = -1
+
+
+
+func create_structure_from_external_zip(base_path: String, zip_path: String) -> bool:
+	print("开始从外部ZIP模板创建项目结构...")
+	print("ZIP路径: ", zip_path)
+	print("目标路径: ", base_path)
+	
+	# 检查ZIP文件是否存在（支持绝对路径）
+	if not FileAccess.file_exists(zip_path):
+		print("❌ ZIP文件不存在: ", zip_path)
+		return false
+	
+	# 确保目标目录存在
+	var target_dir = DirAccess.open(base_path)
+	if target_dir == null:
+		# 尝试创建目标目录
+		var parent_dir = DirAccess.open(base_path.get_base_dir())
+		if parent_dir == null:
+			# 如果是绝对路径，直接创建
+			DirAccess.make_dir_recursive_absolute(base_path)
+			target_dir = DirAccess.open(base_path)
+		else:
+			parent_dir.make_dir_recursive(base_path)
+			target_dir = DirAccess.open(base_path)
+		
+		if target_dir == null:
+			print("❌ 无法创建目标目录: ", base_path)
+			return false
+	
+	# 打开ZIP文件
+	var zip_reader = ZIPReader.new()
+	var error = zip_reader.open(zip_path)
+	if error != OK:
+		print("❌ 无法打开ZIP文件: ", error_string(error))
+		return false
+	
+	print("📦 ZIP文件打开成功")
+	
+	# 获取ZIP中的所有文件
+	var files = zip_reader.get_files()
+	print("📁 ZIP中包含 ", files.size(), " 个文件")
+	
+	var success_count = 0
+	var total_files = files.size()
+	
+	# 解压每个文件
+	for file_path in files:
+		# 跳过.import文件
+		if file_path.ends_with(".import"):
+			continue
+		
+		# 跳过目录条目（通常以/结尾）
+		if file_path.ends_with("/"):
+			continue
+		
+		var target_file_path = base_path.path_join(file_path)
+		
+		if _extract_file_from_zip(zip_reader, file_path, target_file_path):
+			print("  ✓ 解压: ", file_path)
+			success_count += 1
+		else:
+			print("  ❌ 解压失败: ", file_path)
+	
+	zip_reader.close()
+	
+	print("解压完成: ", success_count, " 个文件")
+	
+	if success_count > 0:
+		print("✅ 项目结构创建完成!")
+		return true
+	else:
+		print("❌ 没有文件被解压")
+		return false
+
+# 从ZIP中解压单个文件（改进版）
+func _extract_file_from_zip(zip_reader: ZIPReader, zip_file_path: String, target_path: String) -> bool:
+	# 确保目标文件的目录存在
+	var target_dir = target_path.get_base_dir()
+	if not DirAccess.dir_exists_absolute(target_dir):
+		var error = DirAccess.make_dir_recursive_absolute(target_dir)
+		if error != OK:
+			print("    错误: 无法创建目录: ", target_dir, " (", error_string(error), ")")
+			return false
+	
+	# 从ZIP读取文件内容
+	var file_data = zip_reader.read_file(zip_file_path)
+	if file_data.is_empty():
+		print("    警告: ZIP中的文件为空或读取失败: ", zip_file_path)
+		# 对于空文件，仍然创建它
+	
+	# 写入目标文件
+	var target_file = FileAccess.open(target_path, FileAccess.WRITE)
+	if target_file == null:
+		print("    错误: 无法创建目标文件: ", target_path)
+		return false
+	
+	target_file.store_buffer(file_data)
+	target_file.close()
+	
+	return true
+	
+func get_app_bundle_path():
+	var exe_path = OS.get_executable_path()
+	
+	# 检查路径是否有效
+	if exe_path.is_empty():
+		print("警告: 无法获取可执行文件路径，使用用户数据目录")
+		return OS.get_user_data_dir()
+	
+	var exe_dir = exe_path.get_base_dir()
+	var os_name = OS.get_name()
+	
+	print("检测到操作系统: ", os_name)
+	print("可执行文件路径: ", exe_path)
+	print("可执行文件目录: ", exe_dir)
+	
+	var result_path = ""
+	
+	match os_name:
+		"macOS":
+			if exe_dir.ends_with("/Contents/MacOS"):
+				result_path = exe_dir.get_base_dir().get_base_dir().get_base_dir()
+				print("macOS .app 包父目录: ", result_path)
+			else:
+				result_path = exe_dir
+				print("macOS 非 .app 包模式: ", result_path)
+		
+		"iOS":
+			if exe_dir.find(".app/") != -1:
+				var app_index = exe_dir.find(".app/")
+				var app_path = exe_dir.substr(0, app_index + 4)
+				result_path = app_path.get_base_dir()
+				print("iOS .app 包父目录: ", result_path)
+			else:
+				result_path = exe_dir
+		
+		"Android":
+			result_path = OS.get_user_data_dir()
+			print("Android 用户数据目录: ", result_path)
+		
+		"HTML5":
+			result_path = "."
+			print("Web 平台使用当前目录")
+		
+		_:  # Windows, Linux 等
+			result_path = exe_dir
+			print("默认平台路径: ", result_path)
+	
+	# 确保返回值不为空
+	if result_path.is_empty():
+		result_path = OS.get_user_data_dir()
+		print("使用备用路径: ", result_path)
+	
+	return result_path
