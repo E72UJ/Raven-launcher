@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://4odjtnirpel2"]
+[gd_scene load_steps=42 format=4 uid="uid://4odjtnirpel2"]
 
 [ext_resource type="Script" uid="uid://b5mab2kachsyu" path="res://script/run_button.gd" id="1_24d08"]
 [ext_resource type="Script" uid="uid://c5vw05kdmomxr" path="res://script/create_project_button.gd" id="1_170dk"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://cum01ql2llexo" path="res://script/about.gd" id="2_3ipfy"]
 [ext_resource type="Script" uid="uid://24ahbofxraip" path="res://script/project_item.gd" id="3_g0d6c"]
 [ext_resource type="Script" uid="uid://bmpee6moxdh70" path="res://script/project_item_2.gd" id="5_n0g3p"]
+[ext_resource type="Script" uid="uid://wy6k0esdo20r" path="res://script/project_item_3.gd" id="6_8hd61"]
 [ext_resource type="Script" uid="uid://cpyj7r7qhrpll" path="res://script/open_project_folder.gd" id="8_2qvp8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ic2kv"]
@@ -1264,6 +1265,7 @@ offset_right = 315.0
 offset_bottom = 285.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_xnlii")
 theme_override_styles/focus = SubResource("StyleBoxFlat_fekcc")
+script = ExtResource("6_8hd61")
 
 [node name="Projectname" type="Label" parent="Left/ProjectItem3"]
 layout_mode = 0
