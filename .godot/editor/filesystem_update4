@@ -9,3 +9,4 @@ res://script/select.gd
 res://script/cancel_button.gd
 res://script/ProjectManager.gd
 res://about.tscn
+res://script/open_project_folder.gd
