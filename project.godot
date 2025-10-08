@@ -14,6 +14,7 @@ config/name="Raven Launcher 0.14"
 config/description="Raven engine 引擎启动器"
 run/main_scene="uid://4odjtnirpel2"
 config/features=PackedStringArray("4.5", "Forward Plus")
+boot_splash/image="uid://dpbe4jay7hkxv"
 config/icon="uid://doj12oligumop"
 
 [display]
