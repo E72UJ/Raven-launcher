@@ -77,8 +77,8 @@ var metadata: Dictionary = {
 
 # 构造函数
 var executable_dir = OS.get_executable_path().get_base_dir()
-#func _init(json_file: String = "/Users/furau/Desktop/Raven-launcher/asstes/projects.json"):
-func _init(json_file: String = executable_dir + "/projects.json"):
+func _init(json_file: String = "/Users/furau/Desktop/Raven-launcher/asstes/projects.json"):
+#func _init(json_file: String = executable_dir + "/projects.json"):
 	file_path = json_file
 	load_data()
 
