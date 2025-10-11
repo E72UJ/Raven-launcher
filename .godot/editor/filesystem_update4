@@ -1,12 +1,4 @@
 res://Root.tscn
-res://script/run_button.gd
-res://script/create_project_button.gd
-res://asstes/projects.json
-res://script/create_button.gd
+res://script/root.gd
 res://New_project.tscn
-res://script/new_project.gd
-res://script/select.gd
-res://script/cancel_button.gd
-res://script/ProjectManager.gd
 res://about.tscn
-res://script/open_project_folder.gd
