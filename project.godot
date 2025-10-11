@@ -13,7 +13,7 @@ config_version=5
 config/name="Raven Launcher 0.14"
 config/description="Raven engine 引擎启动器"
 run/main_scene="uid://4odjtnirpel2"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 boot_splash/image="uid://dpbe4jay7hkxv"
 config/icon="uid://doj12oligumop"
 
@@ -22,3 +22,11 @@ config/icon="uid://doj12oligumop"
 window/size/viewport_height=715
 window/size/mode=2
 window/stretch/mode="canvas_items"
+
+[dotnet]
+
+project/assembly_name="Raven Launcher 0.14"
+
+[rendering]
+
+anti_aliasing/screen_space_roughness_limiter/enabled=false

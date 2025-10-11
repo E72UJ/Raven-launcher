@@ -145,18 +145,6 @@ expand_margin_bottom = 2.0
 font_size = 20
 font_color = Color(0.878431, 0.878431, 0.878431, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3s1jh"]
-content_margin_left = 8.0
-content_margin_top = 4.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
-bg_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eiehy"]
 content_margin_left = 4.0
 content_margin_top = 4.0
@@ -180,13 +168,12 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 shadow_color = Color(0, 0, 0, 0.945098)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txoq7"]
-content_margin_left = 4.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3s1jh"]
+content_margin_left = 8.0
 content_margin_top = 4.0
-content_margin_right = 4.0
+content_margin_right = 8.0
 content_margin_bottom = 4.0
-bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
-border_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+bg_color = Color(0.0728426, 0.0728426, 0.0728426, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -210,6 +197,19 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 corner_detail = 5
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_txoq7"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+border_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3hl3"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -225,18 +225,6 @@ corner_detail = 5
 [sub_resource type="LabelSettings" id="LabelSettings_v7u23"]
 font_size = 20
 font_color = Color(0.878431, 0.878431, 0.878431, 1)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgaft"]
-content_margin_left = 8.0
-content_margin_top = 4.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
-bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8jyxg"]
 content_margin_left = 4.0
@@ -261,6 +249,18 @@ expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 shadow_color = Color(0, 0, 0, 1)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qgaft"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0wbq"]
 content_margin_left = 0.0
 content_margin_top = 0.0
@@ -275,18 +275,6 @@ corner_detail = 5
 
 [sub_resource type="LabelSettings" id="LabelSettings_bco4o"]
 font_size = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_246l3"]
-content_margin_left = 8.0
-content_margin_top = 4.0
-content_margin_right = 8.0
-content_margin_bottom = 4.0
-bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
-corner_radius_top_left = 3
-corner_radius_top_right = 3
-corner_radius_bottom_right = 3
-corner_radius_bottom_left = 3
-corner_detail = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8h8ll"]
 content_margin_left = 4.0
@@ -310,12 +298,12 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pmvh"]
-content_margin_left = 4.0
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_246l3"]
+content_margin_left = 8.0
 content_margin_top = 4.0
-content_margin_right = 4.0
+content_margin_right = 8.0
 content_margin_bottom = 4.0
-bg_color = Color(0.266667, 0.266667, 0.266667, 1)
+bg_color = Color(0.0705882, 0.0705882, 0.0705882, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -344,12 +332,12 @@ expand_margin_top = 2.0
 expand_margin_right = 2.0
 expand_margin_bottom = 2.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n1bx"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7pmvh"]
 content_margin_left = 4.0
 content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
-bg_color = Color(0.290196, 0.478431, 0.737255, 1)
+bg_color = Color(0.266667, 0.266667, 0.266667, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -362,6 +350,18 @@ content_margin_top = 4.0
 content_margin_right = 4.0
 content_margin_bottom = 4.0
 bg_color = Color(0.34902, 0.545098, 0.803922, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6n1bx"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.290196, 0.478431, 0.737255, 1)
 corner_radius_top_left = 3
 corner_radius_top_right = 3
 corner_radius_bottom_right = 3
@@ -462,8 +462,8 @@ offset_left = 313.0
 offset_top = 39.0
 offset_right = 644.0
 offset_bottom = 78.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_3s1jh")
 theme_override_styles/focus = SubResource("StyleBoxFlat_eiehy")
+theme_override_styles/normal = SubResource("StyleBoxFlat_3s1jh")
 selected = 0
 item_count = 1
 popup/item_0/text = "0.13"
@@ -475,8 +475,8 @@ offset_left = -6.0
 offset_top = 91.0
 offset_right = 110.0
 offset_bottom = 133.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_txoq7")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_w4i57")
+theme_override_styles/normal = SubResource("StyleBoxFlat_txoq7")
 text = "选择位置"
 script = ExtResource("2_v7u23")
 
@@ -501,8 +501,8 @@ offset_left = 7.0
 offset_top = 37.0
 offset_right = 672.0
 offset_bottom = 77.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_qgaft")
 theme_override_styles/focus = SubResource("StyleBoxFlat_8jyxg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_qgaft")
 selected = 0
 item_count = 1
 popup/item_0/text = "默认模版"
@@ -528,8 +528,8 @@ offset_left = 3.0
 offset_top = 36.0
 offset_right = 664.0
 offset_bottom = 79.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_246l3")
 theme_override_styles/focus = SubResource("StyleBoxFlat_8h8ll")
+theme_override_styles/normal = SubResource("StyleBoxFlat_246l3")
 selected = 0
 item_count = 2
 popup/item_0/text = "剧情模式"
@@ -542,8 +542,8 @@ offset_left = 711.0
 offset_top = 634.0
 offset_right = 818.0
 offset_bottom = 677.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_7pmvh")
 theme_override_styles/focus = SubResource("StyleBoxFlat_2hkc5")
+theme_override_styles/normal = SubResource("StyleBoxFlat_7pmvh")
 text = "取消"
 script = ExtResource("1_7rfqp")
 
@@ -552,8 +552,8 @@ offset_left = 827.0
 offset_top = 633.0
 offset_right = 963.0
 offset_bottom = 678.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_6n1bx")
 theme_override_styles/hover = SubResource("StyleBoxFlat_4cnhp")
+theme_override_styles/normal = SubResource("StyleBoxFlat_6n1bx")
 text = "创建项目"
 script = ExtResource("2_apm7b")
 
