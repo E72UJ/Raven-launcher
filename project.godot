@@ -20,6 +20,7 @@ config/icon="uid://doj12oligumop"
 [display]
 
 window/size/viewport_height=715
+window/size/mode=2
 window/stretch/mode="canvas_items"
 
 [dotnet]

@@ -1,5 +1,4 @@
 res://Root.tscn
+res://script/root.gd
 res://New_project.tscn
 res://about.tscn
-res://script/ProjectManager.gd
-res://script/root.gd
