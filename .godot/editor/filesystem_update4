@@ -1,6 +1,3 @@
-res://about.tscn
-res://script/ProjectManager.gd
-res://README.md
-res://Root.tscn
-res://script/root.gd
+res://New_project.tscn
+res://script/create_button.gd
 res://asstes/projects.json

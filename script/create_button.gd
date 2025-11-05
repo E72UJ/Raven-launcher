@@ -192,7 +192,7 @@ func create_structure_from_external_zip(base_path: String, zip_path: String) -> 
 	
 	# 检查ZIP文件是否存在（支持绝对路径）
 	if not FileAccess.file_exists(zip_path):
-		print("❌ ZIP文件不存在: ", zip_path)
+		print("ZIP文件不存在: ", zip_path)
 		return false
 	
 	# 确保目标目录存在
@@ -209,17 +209,17 @@ func create_structure_from_external_zip(base_path: String, zip_path: String) -> 
 			target_dir = DirAccess.open(base_path)
 		
 		if target_dir == null:
-			print("❌ 无法创建目标目录: ", base_path)
+			print("无法创建目标目录: ", base_path)
 			return false
 	
 	# 打开ZIP文件
 	var zip_reader = ZIPReader.new()
 	var error = zip_reader.open(zip_path)
 	if error != OK:
-		print("❌ 无法打开ZIP文件: ", error_string(error))
+		print(" 无法打开ZIP文件: ", error_string(error))
 		return false
 	
-	print("📦 ZIP文件打开成功")
+	print(" ZIP文件打开成功")
 	
 	# 获取ZIP中的所有文件
 	var files = zip_reader.get_files()
@@ -244,17 +244,17 @@ func create_structure_from_external_zip(base_path: String, zip_path: String) -> 
 			print("  ✓ 解压: ", file_path)
 			success_count += 1
 		else:
-			print("  ❌ 解压失败: ", file_path)
+			print("   解压失败: ", file_path)
 	
 	zip_reader.close()
 	
 	print("解压完成: ", success_count, " 个文件")
 	
 	if success_count > 0:
-		print("✅ 项目结构创建完成!")
+		print("项目结构创建完成!")
 		return true
 	else:
-		print("❌ 没有文件被解压")
+		print("没有文件被解压")
 		return false
 
 # 从ZIP中解压单个文件（改进版）
