@@ -1,3 +1,3 @@
-res://New_project.tscn
-res://script/create_button.gd
 res://asstes/projects.json
+res://Root.tscn
+res://script/project_item_3.gd

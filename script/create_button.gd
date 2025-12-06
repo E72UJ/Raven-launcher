@@ -147,10 +147,15 @@ func perform_project_creation(name: String, path: String, version: String, mode:
 	if dir.make_dir(name) != OK:
 		if not DirAccess.dir_exists_absolute(full_project_path):
 			return false
-	create_structure_from_external_zip(path + "/assets", get_app_bundle_path() + "/basic.zip")
-	create_structure_from_external_zip(path, get_app_bundle_path() + "/raven.zip")  # 可能覆盖上面的文件
-	# 这里可以添加更多项目创建逻辑
-
+	
+	# 根据模式解压不同的文件
+	if mode == "开发模式":
+		# 开发模式：只解压 moon.zip，不解压基础文件
+		create_structure_from_external_zip(full_project_path, get_app_bundle_path() + "/moon.zip")
+	else:
+		# 其他模式：解压基础文件和 raven.zip
+		create_structure_from_external_zip(full_project_path + "/assets", get_app_bundle_path() + "/basic.zip")
+		create_structure_from_external_zip(full_project_path, get_app_bundle_path() + "/raven.zip")
 	
 	# 找到可用的槽位并创建项目
 	var available_slot = find_available_slot()
@@ -161,7 +166,7 @@ func perform_project_creation(name: String, path: String, version: String, mode:
 	# 更新槽位内容并将状态设为 "show"
 	var success = project_manager.edit_project_by_id(available_slot, {
 		"name": name,
-		"path": path,
+		"path": full_project_path,
 		"project_type": type,
 		"tags": [mode, version],
 		"status": "show"  # 关键：设置状态为 "show" 表示已创建
@@ -174,6 +179,7 @@ func perform_project_creation(name: String, path: String, version: String, mode:
 		return false
 	
 	return true
+
 
 func clear_form():
 	# 清空所有表单字段
