@@ -149,7 +149,8 @@ func perform_project_creation(name: String, path: String, version: String, mode:
 			return false
 	
 	# 根据模式解压不同的文件
-	if mode == "开发模式":
+	print(mode,"实际的输出的值")
+	if type == "开发模式":
 		# 开发模式：只解压 moon.zip，不解压基础文件
 		create_structure_from_external_zip(full_project_path, get_app_bundle_path() + "/moon.zip")
 	else:

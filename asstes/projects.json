@@ -1,6 +1,6 @@
 {
 	"metadata": {
-		"last_updated": "2025-12-07T00:27:08",
+		"last_updated": "2025-12-07T21:57:07",
 		"total_projects": 3,
 		"version": "0.1.4"
 	},
@@ -11,7 +11,7 @@
 			"engine_version": "0.1.4",
 			"id": "vn_001",
 			"last_opened": "2024-10-02T16:45:22Z",
-			"modified_date": "2025-12-07T00:27:08",
+			"modified_date": "2025-12-07T21:57:07",
 			"name": "更名测试",
 			"path": "/new/path/to/project",
 			"project_type": "Visual Novel",
@@ -30,7 +30,7 @@
 			"engine_version": "Raven 0.1.3",
 			"id": "vn_002",
 			"last_opened": "2024-09-25T09:30:48Z",
-			"modified_date": "2025-12-07T00:10:45",
+			"modified_date": "2025-12-07T00:34:30",
 			"name": "123",
 			"path": "/Users/furau/Documents/test/123",
 			"project_type": "开发模式",
@@ -46,10 +46,10 @@
 			"engine_version": "Godot 4.2.0",
 			"id": "vn_003",
 			"last_opened": "2024-10-01T20:15:33Z",
-			"modified_date": "2025-12-07T00:13:42",
-			"name": "333",
-			"path": "/Users/furau/Documents/test/333",
-			"project_type": "剧情模式",
+			"modified_date": "2025-12-07T20:41:56",
+			"name": "12222",
+			"path": "/Users/furau/Documents/哈哈哈/12222",
+			"project_type": "开发模式",
 			"status": "show",
 			"tags": [
 				"默认模版",

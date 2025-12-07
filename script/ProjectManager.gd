@@ -79,9 +79,14 @@ var metadata: Dictionary = {
 var executable_dir = OS.get_executable_path().get_base_dir()
 func _init(json_file: String = "/Users/furau/Desktop/Raven-launcher/asstes/projects.json"):
 #func _init(json_file: String = executable_dir + "/projects.json"):
+#func _init(json_file: String = OS.get_user_data_dir() + "/projects.json"):
 	file_path = json_file
 	load_data()
 
+func _ensure_directory_exists(path: String):
+	if not DirAccess.dir_exists_absolute(path):
+		DirAccess.make_dir_recursive_absolute(path)
+		
 # 添加项目
 func add(name: String, path: String = "", description: String = "", tags: Array[String] = [], project_type: String = "Visual Novel") -> Project:
 	if name.is_empty():
